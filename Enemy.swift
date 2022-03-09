@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Enemy{
+struct Enemy{
     var health :Int
     var attackhealth :Int
      
@@ -20,7 +20,8 @@ class Enemy{
     func move() {
         print("walk forward")
     }
-    func takeDamage(amount: Int) {
+    //since property of structure is changing.
+    mutating func takeDamage(amount: Int) {
         print(health = health - amount)
     }
 }
